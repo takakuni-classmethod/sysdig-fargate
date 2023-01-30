@@ -13,10 +13,12 @@ resource "aws_iam_role_policy_attachment" "managed_task_exec" {
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group
 resource "aws_cloudwatch_log_group" "task" {
   name = "${var.prefix}-logs"
+  retention_in_days = 7
 }
 
 resource "aws_cloudwatch_log_group" "workload_agent" {
   name = "${var.prefix}-workload-agent-logs"
+  retention_in_days = 7
 }
 
 # https://registry.terraform.io/providers/sysdiglabs/sysdig/latest/docs/data-sources/fargate_workload_agent
