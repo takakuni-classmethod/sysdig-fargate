@@ -21,7 +21,7 @@ resource "aws_s3_bucket_policy" "flowlog" {
   policy = templatefile("${path.module}/policy_document/bucket_flowlog.json", {
     bucket_arn = aws_s3_bucket.flowlog.arn
     account_id = data.aws_caller_identity.self.account_id
-    region = data.aws_region.current.name
+    region     = data.aws_region.current.name
   })
 }
 
@@ -40,10 +40,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "flowlog" {
 resource "aws_s3_bucket_public_access_block" "flowlog" {
   bucket = aws_s3_bucket.flowlog.id
 
-  block_public_acls = true
-  block_public_policy = true
+  block_public_acls       = true
+  block_public_policy     = true
   restrict_public_buckets = true
-  ignore_public_acls = true
+  ignore_public_acls      = true
 
   depends_on = [
     aws_s3_bucket_policy.flowlog,

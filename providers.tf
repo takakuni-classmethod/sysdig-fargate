@@ -1,11 +1,11 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "4.37.0"
     }
     sysdig = {
-      source = "sysdiglabs/sysdig"
+      source  = "sysdiglabs/sysdig"
       version = "0.5.40"
     }
   }
@@ -21,6 +21,6 @@ data "aws_region" "current" {}
 data "aws_caller_identity" "self" {}
 
 provider "sysdig" {
-  sysdig_secure_url = "https://app.au1.sysdig.com"
+  sysdig_secure_url       = "https://app.au1.sysdig.com"
   sysdig_secure_api_token = var.sysdig_access_key
 }

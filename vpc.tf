@@ -12,8 +12,8 @@ module "vpc" {
   enable_nat_gateway = true
   single_nat_gateway = true
 
-  enable_flow_log = true
+  enable_flow_log           = true
   flow_log_destination_type = "s3"
-  flow_log_destination_arn = aws_s3_bucket.flowlog.arn
-  flow_log_traffic_type = "ALL"
+  flow_log_destination_arn  = aws_s3_bucket.flowlog.arn
+  flow_log_traffic_type     = "ALL"
 }
