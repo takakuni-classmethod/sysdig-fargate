@@ -1,0 +1,21 @@
+[
+  {
+      "name": "event-generator",
+      "essential": true,
+      "image": "falcosecurity/event-generator",
+      "entryPoint": ["/bin/event-generator"],
+      "command": [
+        "run",
+        "syscall",
+        "--loop"
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-region": "${region}",
+          "awslogs-group": "${log_group_name}",
+          "awslogs-stream-prefix": "${log_stream_prefix}"
+        }
+      }
+  }
+]
