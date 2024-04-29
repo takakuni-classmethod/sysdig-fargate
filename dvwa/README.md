@@ -1,11 +1,11 @@
 # sysdig-fargate
 
-[Serverless Agentsを利用してECS Fargate環境でSysdig Secureを利用してみた〜Terraform編〜](https://dev.classmethod.jp/etc/sysdig-secure-ec…rraform-overview/)のサンプルコードです。
+[Serverless Agents を利用して ECS Fargate 環境で Sysdig Secure を利用してみた〜Terraform 編〜](https://dev.classmethod.jp/articles/sysdig-secure-ecs-fargate-setting-up-terraform-overview/)のサンプルコードです。
 
 ## 前提条件
 
-- AWSアカウントを持っていること
-- Sysdig Secureのアカウントを持っていること
+- AWS アカウントを持っていること
+- Sysdig Secure のアカウントを持っていること
 
 ## 構成図
 
@@ -24,6 +24,7 @@ terraform init
 ```
 
 #### 作成
+
 ```
 terraform apply
 ```
