@@ -1,4 +1,3 @@
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 resource "aws_s3_bucket" "flowlog" {
   bucket = "${var.prefix}-flowlog-${data.aws_caller_identity.self.account_id}"
 
